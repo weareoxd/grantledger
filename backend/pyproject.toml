@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "grantledger"
+version = "0.1.0"
+description = "Read-only MCP server over Canadian federal and Alberta grant disclosures"
+authors = ["OXD Labs"]
+readme = "../README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.2"
+django-configurations = "^2.5.1"
+psycopg = {extras = ["binary"], version = "^3.2"}
+mcp = "^1.30.0"
+uvicorn = "^0.54.0"
+google-auth-oauthlib = "^1.5.0"
+pyjwt = "^2.9"
+unidecode = "^1.4.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^26.5.1"
+flake8 = "^7.4.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

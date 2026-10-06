@@ -1,0 +1,50 @@
+services:
+  django:
+    env_file: .env
+    container_name: grantledger-django
+    build:
+      context: ./
+      dockerfile: ./compose/Dockerfile
+    stdin_open: true
+    tty: true
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/var/www
+    command: /start.sh
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  mcp:
+    env_file: .env
+    container_name: grantledger-mcp
+    build:
+      context: ./
+      dockerfile: ./compose/Dockerfile
+    ports:
+      - "8082:8082"
+    volumes:
+      - ./backend:/var/www
+    command: /start_mcp.sh
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  postgres:
+    env_file: .env
+    image: postgres:16
+    container_name: grantledger-postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  postgres:
+    driver: local
