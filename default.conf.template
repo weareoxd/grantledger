@@ -1,0 +1,13 @@
+# Substituted to /etc/nginx/conf.d/default.conf by the nginx image's
+# entrypoint, with ${PORT} replaced by the PORT environment variable
+# (injected by the ECS task definition from the provisioned container_port).
+server {
+    listen ${PORT};
+
+    root /usr/share/nginx/html;
+    index index.html;
+
+    # Serve the page with HTTP 200 for every path, so ALB health checks pass
+    # even when the app was provisioned with a custom health_check_path.
+    error_page 404 =200 /index.html;
+}

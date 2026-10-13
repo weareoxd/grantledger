@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>It works!</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #f6f8fa;
+      color: #1f2328;
+    }
+    main {
+      max-width: 34rem;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    p { line-height: 1.6; }
+    code {
+      background: #eaeef2;
+      padding: 0.15em 0.4em;
+      border-radius: 4px;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>🎉 It works!</h1>
+    <p>This app was provisioned and deployed through the ECS pipeline.
+       Every push to the default branch redeploys it automatically.</p>
+    <p>To ship your real application, replace the starter <code>Dockerfile</code>
+       at the repo root. Your app should listen on the <code>PORT</code>
+       environment variable — ECS sets it to the port this app was
+       provisioned with.</p>
+  </main>
+</body>
+</html>
