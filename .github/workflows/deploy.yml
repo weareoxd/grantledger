@@ -1,0 +1,34 @@
+name: Build and deploy to AWS ECS
+
+# Thin wrapper: all deploy logic lives in the shared workflow in
+# weareoxd/aws-ecs-devops (.github/workflows/ecs-deploy.yml). Fixes land there
+# and apply to every app on its next deploy.
+#
+# Optional inputs, added under `with:`:
+#
+#   # two-image repos that run migrations in a second container
+#   migrations-dockerfile: Dockerfile.migrations
+#
+#   # build args for the app image — `|` block scalar, one KEY=value per line
+#   # (never pass secrets: build args are readable in the built image)
+#   app-build-args: |
+#     VITE_API_URL=${{ vars.APP_URL }}
+#     SENTRY_ENVIRONMENT=production
+
+on:
+  workflow_dispatch:
+    inputs:
+      commit_message:
+        description: 'Message for manual workflow run'
+        default: 'Manual workflow run'
+        required: false
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    uses: weareoxd/aws-ecs-devops/.github/workflows/ecs-deploy.yml@main
+    with:
+      commit-message: ${{ inputs.commit_message || '' }}
+    secrets: inherit

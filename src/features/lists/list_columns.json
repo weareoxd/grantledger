@@ -1,0 +1,1630 @@
+{
+  "/api/organization": {
+    "toggles": ["fiscalYear"],
+    "columns": {
+      "agreement": [
+        {
+          "id": "name",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "measure",
+          "sortable": false,
+          "filterable": false
+        },
+        {
+          "id": "ministry_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_value",
+          "sortable": true,
+          "filterable": true
+        }
+      ],
+      "payment": [
+        {
+          "id": "name",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "measure",
+          "sortable": false,
+          "filterable": false
+        },
+        {
+          "id": "ministry_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_value",
+          "sortable": true,
+          "filterable": true
+        }
+      ],
+      "unknown": [
+        {
+          "id": "name",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "measure",
+          "sortable": false,
+          "filterable": false
+        },
+        {
+          "id": "ministry_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_value",
+          "sortable": true,
+          "filterable": true
+        }
+      ]
+    }
+  },
+  "/api/organization/{organization_id}/award": {
+    "toggles": ["placeholders", "superseded"],
+    "columns": {
+      "agreement": [
+        {
+          "id": "recipient",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "ministry",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "program",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "reference",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "value",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "start_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "end_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "fiscal_year",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "agreement_type",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "title",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "description",
+          "sortable": false,
+          "filterable": true
+        },
+        {
+          "id": "agreement_number",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_type",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_province",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_city",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "naics",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "amendment_number",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "amendment_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "is_current",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "source_file",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "import_date",
+          "sortable": true,
+          "filterable": true
+        }
+      ],
+      "payment": [
+        {
+          "id": "recipient",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "ministry",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "program",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "value",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "start_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "fiscal_year",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "lottery_fund",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "business_unit",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "start_date_estimated",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "source_file",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "import_date",
+          "sortable": true,
+          "filterable": true
+        }
+      ],
+      "unknown": [
+        {
+          "id": "recipient",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "ministry",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "program",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "value",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "start_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "fiscal_year",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "source_file",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "import_date",
+          "sortable": true,
+          "filterable": true
+        }
+      ]
+    }
+  },
+  "/api/organization/{organization_id}/ministry": {
+    "toggles": ["fiscalYear"],
+    "columns": {
+      "agreement": [
+        {
+          "id": "name",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "program_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_value",
+          "sortable": true,
+          "filterable": true
+        }
+      ],
+      "payment": [
+        {
+          "id": "name",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "program_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_value",
+          "sortable": true,
+          "filterable": true
+        }
+      ],
+      "unknown": [
+        {
+          "id": "name",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "program_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_value",
+          "sortable": true,
+          "filterable": true
+        }
+      ]
+    }
+  },
+  "/api/organization/{organization_id}/ministry/{ministry_id}/award": {
+    "toggles": ["placeholders", "superseded"],
+    "columns": {
+      "agreement": [
+        {
+          "id": "recipient",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "program",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "reference",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "value",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "start_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "end_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "fiscal_year",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "agreement_type",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "title",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "description",
+          "sortable": false,
+          "filterable": true
+        },
+        {
+          "id": "agreement_number",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_type",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_province",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_city",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "naics",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "amendment_number",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "amendment_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "is_current",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "source_file",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "import_date",
+          "sortable": true,
+          "filterable": true
+        }
+      ],
+      "payment": [
+        {
+          "id": "recipient",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "program",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "value",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "start_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "fiscal_year",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "lottery_fund",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "business_unit",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "start_date_estimated",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "source_file",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "import_date",
+          "sortable": true,
+          "filterable": true
+        }
+      ],
+      "unknown": [
+        {
+          "id": "recipient",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "program",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "value",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "start_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "fiscal_year",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "source_file",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "import_date",
+          "sortable": true,
+          "filterable": true
+        }
+      ]
+    }
+  },
+  "/api/organization/{organization_id}/ministry/{ministry_id}/program": {
+    "toggles": ["fiscalYear", "placeholders"],
+    "columns": {
+      "agreement": [
+        {
+          "id": "name",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_value",
+          "sortable": true,
+          "filterable": true
+        }
+      ],
+      "payment": [
+        {
+          "id": "name",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_value",
+          "sortable": true,
+          "filterable": true
+        }
+      ],
+      "unknown": [
+        {
+          "id": "name",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_value",
+          "sortable": true,
+          "filterable": true
+        }
+      ]
+    }
+  },
+  "/api/organization/{organization_id}/ministry/{ministry_id}/program/{program_id}/award": {
+    "toggles": ["placeholders", "superseded"],
+    "columns": {
+      "agreement": [
+        {
+          "id": "recipient",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "reference",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "value",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "start_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "end_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "fiscal_year",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "agreement_type",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "title",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "description",
+          "sortable": false,
+          "filterable": true
+        },
+        {
+          "id": "agreement_number",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_type",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_province",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_city",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "naics",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "amendment_number",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "amendment_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "is_current",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "source_file",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "import_date",
+          "sortable": true,
+          "filterable": true
+        }
+      ],
+      "payment": [
+        {
+          "id": "recipient",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "value",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "start_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "fiscal_year",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "lottery_fund",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "business_unit",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "start_date_estimated",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "source_file",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "import_date",
+          "sortable": true,
+          "filterable": true
+        }
+      ],
+      "unknown": [
+        {
+          "id": "recipient",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "value",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "start_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "fiscal_year",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "source_file",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "import_date",
+          "sortable": true,
+          "filterable": true
+        }
+      ]
+    }
+  },
+  "/api/organization/{organization_id}/ministry/{ministry_id}/program/{program_id}/recipient": {
+    "toggles": ["fiscalYear", "placeholders"],
+    "columns": {
+      "agreement": [
+        {
+          "id": "name",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_value",
+          "sortable": true,
+          "filterable": true
+        }
+      ],
+      "payment": [
+        {
+          "id": "name",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_value",
+          "sortable": true,
+          "filterable": true
+        }
+      ],
+      "unknown": [
+        {
+          "id": "name",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_value",
+          "sortable": true,
+          "filterable": true
+        }
+      ]
+    }
+  },
+  "/api/organization/{organization_id}/ministry/{ministry_id}/program/{program_id}/recipient/{recipient_id}/award": {
+    "toggles": ["superseded"],
+    "columns": {
+      "agreement": [
+        {
+          "id": "reference",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "value",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "start_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "end_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "fiscal_year",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "agreement_type",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "title",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "description",
+          "sortable": false,
+          "filterable": true
+        },
+        {
+          "id": "agreement_number",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_type",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_province",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_city",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "naics",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "amendment_number",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "amendment_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "is_current",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "source_file",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "import_date",
+          "sortable": true,
+          "filterable": true
+        }
+      ],
+      "payment": [
+        {
+          "id": "value",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "start_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "fiscal_year",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "lottery_fund",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "business_unit",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "start_date_estimated",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "source_file",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "import_date",
+          "sortable": true,
+          "filterable": true
+        }
+      ],
+      "unknown": [
+        {
+          "id": "value",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "start_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "fiscal_year",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "source_file",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "import_date",
+          "sortable": true,
+          "filterable": true
+        }
+      ]
+    }
+  },
+  "/api/organization/{organization_id}/ministry/{ministry_id}/recipient": {
+    "toggles": ["fiscalYear", "placeholders"],
+    "columns": {
+      "agreement": [
+        {
+          "id": "name",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_value",
+          "sortable": true,
+          "filterable": true
+        }
+      ],
+      "payment": [
+        {
+          "id": "name",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_value",
+          "sortable": true,
+          "filterable": true
+        }
+      ],
+      "unknown": [
+        {
+          "id": "name",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_value",
+          "sortable": true,
+          "filterable": true
+        }
+      ]
+    }
+  },
+  "/api/organization/{organization_id}/ministry/{ministry_id}/recipient/{recipient_id}/award": {
+    "toggles": ["superseded"],
+    "columns": {
+      "agreement": [
+        {
+          "id": "program",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "reference",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "value",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "start_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "end_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "fiscal_year",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "agreement_type",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "title",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "description",
+          "sortable": false,
+          "filterable": true
+        },
+        {
+          "id": "agreement_number",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_type",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_province",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_city",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "naics",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "amendment_number",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "amendment_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "is_current",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "source_file",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "import_date",
+          "sortable": true,
+          "filterable": true
+        }
+      ],
+      "payment": [
+        {
+          "id": "program",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "value",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "start_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "fiscal_year",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "lottery_fund",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "business_unit",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "start_date_estimated",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "source_file",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "import_date",
+          "sortable": true,
+          "filterable": true
+        }
+      ],
+      "unknown": [
+        {
+          "id": "program",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "value",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "start_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "fiscal_year",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "source_file",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "import_date",
+          "sortable": true,
+          "filterable": true
+        }
+      ]
+    }
+  },
+  "/api/organization/{organization_id}/recipient": {
+    "toggles": ["fiscalYear", "placeholders"],
+    "columns": {
+      "agreement": [
+        {
+          "id": "name",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "ministry_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_value",
+          "sortable": true,
+          "filterable": true
+        }
+      ],
+      "payment": [
+        {
+          "id": "name",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "ministry_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_value",
+          "sortable": true,
+          "filterable": true
+        }
+      ],
+      "unknown": [
+        {
+          "id": "name",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "ministry_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_value",
+          "sortable": true,
+          "filterable": true
+        }
+      ]
+    }
+  },
+  "/api/organization/{organization_id}/recipient/{recipient_id}/award": {
+    "toggles": ["superseded"],
+    "columns": {
+      "agreement": [
+        {
+          "id": "ministry",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "program",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "reference",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "value",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "start_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "end_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "fiscal_year",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "agreement_type",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "title",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "description",
+          "sortable": false,
+          "filterable": true
+        },
+        {
+          "id": "agreement_number",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_type",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_province",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "recipient_city",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "naics",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "amendment_number",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "amendment_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "is_current",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "source_file",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "import_date",
+          "sortable": true,
+          "filterable": true
+        }
+      ],
+      "payment": [
+        {
+          "id": "ministry",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "program",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "value",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "start_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "fiscal_year",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "lottery_fund",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "business_unit",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "start_date_estimated",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "source_file",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "import_date",
+          "sortable": true,
+          "filterable": true
+        }
+      ],
+      "unknown": [
+        {
+          "id": "ministry",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "program",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "value",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "start_date",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "fiscal_year",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "source_file",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "import_date",
+          "sortable": true,
+          "filterable": true
+        }
+      ]
+    }
+  },
+  "/api/organization/{organization_id}/recipient/{recipient_id}/ministry": {
+    "toggles": ["fiscalYear"],
+    "columns": {
+      "agreement": [
+        {
+          "id": "name",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_value",
+          "sortable": true,
+          "filterable": true
+        }
+      ],
+      "payment": [
+        {
+          "id": "name",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_value",
+          "sortable": true,
+          "filterable": true
+        }
+      ],
+      "unknown": [
+        {
+          "id": "name",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_count",
+          "sortable": true,
+          "filterable": true
+        },
+        {
+          "id": "award_value",
+          "sortable": true,
+          "filterable": true
+        }
+      ]
+    }
+  }
+}
