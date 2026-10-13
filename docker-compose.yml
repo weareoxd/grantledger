@@ -1,0 +1,48 @@
+# Local development runs Postgres here and the web app and worker on this machine (`make start`).
+# The `prod` profile runs the production image instead (`make prod-up`).
+services:
+  postgres:
+    image: postgres:16
+    container_name: grantledger-postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-grantledger}
+      POSTGRES_USER: ${POSTGRES_USER:-grantledger}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-grantledger}
+    # Parallel queries over millions of awards share memory through /dev/shm: Docker's 64MB
+    # default runs out ("could not resize shared memory segment")
+    shm_size: 512mb
+    ports:
+      # For tools on this machine. 5432 and 5433 are often taken by other projects' databases
+      - "${POSTGRES_HOST_PORT:-5434}:5432"
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  # The production image, as ECS runs it: web server and worker in one container on port 80
+  app:
+    profiles: ["prod"]
+    build:
+      context: .
+    image: grantledger:local
+    env_file: .env
+    environment:
+      # The app's database in the postgres container: APP_DATABASE_NAME when the app doesn't use
+      # the container's first database (POSTGRES_DB), as DATABASE_URL's database name
+      DATABASE_URL: postgres://${POSTGRES_USER:-grantledger}:${POSTGRES_PASSWORD:-grantledger}@postgres:5432/${APP_DATABASE_NAME:-${POSTGRES_DB:-grantledger}}
+    ports:
+      - "3000:80"
+    volumes:
+      - data:/app/data
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  postgres:
+    driver: local
+  data:
+    driver: local

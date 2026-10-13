@@ -1,0 +1,28 @@
+# Environment
+.env
+.env.*
+!.env.example
+*.local
+
+# Node / Next.js
+node_modules/
+.next/
+dist/
+coverage/
+next-env.d.ts
+*.tsbuildinfo
+
+# Downloaded open data (the worker keeps its files here)
+/data/
+*.csv.gz
+
+# The Django / Vite stack this replaced, archived at the cutover
+legacy-stack-*.tar.gz
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Notes and drafts kept out of the repository
+/docs/
