@@ -6,8 +6,7 @@ server answer the questions a fixed web interface can't?
 
 GrantLedger has both sides of that comparison on the same data. A web UI offers preset screens,
 drill-down links, filters, a column chooser and CSV export. The MCP server lets Claude, ChatGPT
-or Claude in Excel query the same data in plain language. Findings are in
-[docs/experiment-notes.md](docs/experiment-notes.md).
+or Claude in Excel query the same data in plain language.
 
 It is one Next.js app: the web UI, its JSON API, the MCP server and an admin section, plus a
 background worker that downloads and imports the governments' files on a schedule.
