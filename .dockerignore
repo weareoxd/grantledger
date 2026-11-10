@@ -1,0 +1,34 @@
+node_modules
+.next
+dist
+.git
+.github
+.claude
+.env
+.env.*
+!.env.example
+data
+deploy
+coverage
+test-results
+playwright-report
+*.log
+.DS_Store
+docker-compose*.yml
+backend
+auth
+frontend
+compose
+docs
+# Not read by the build: a change to any of these would otherwise invalidate `COPY . .` and rerun
+# the whole Next.js build on deploy
+*.md
+*.tar.gz
+src/test
+src/tests
+**/*.test.ts
+**/*.test.tsx
+vitest.config.ts
+biome.json
+.dockerignore
+Dockerfile
